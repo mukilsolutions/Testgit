@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    displayAlign:"left",
+    displayIndent:"0em"
+
+});
+</script>
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+      tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+      "HTML-CSS": {
+        linebreaks: { automatic: true, width: "container" }          
+      }              
+   });
+</script>
+    
+    <script type="text/javascript" src="js/data1.js"></script>
+    <script type="text/javascript" src="js/data2.js"></script>
+    <script type="text/javascript" src="js/data3.js"></script>
+    <script type="text/javascript" src="js/data4.js"></script>
+    <script type="text/javascript" src="js/data5.js"></script>
+    <script type="text/javascript" src="js/data6.js"></script>
+    <script type="text/javascript" src="js/data7.js"></script>
+    <script type="text/javascript" src="js/data8.js"></script>
+    <script type="text/javascript" src="js/data9.js"></script>
+    
+<style>
+div.w3-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  padding: 20px;
+  font-size: 20px;
+}
+    
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+    <script>
+
+  var SocialScience6TOC = {
+	Std: "6th",
+	Subject: "SocialScience ",
+	Chapters: [
+		    "வரலாறு-அலகு 1: வரலாறு என்றால் என்ன?",
+        "வரலாறு-அலகு 2: மனிதர்களின் பரிணாம வளர்ச்சி",
+        "வரலாறு-அலகு 3: சிந்து வெளி நாகரிகம்",
+        "வரலாறு-அலகு 4: தமிழ்நாட்டின் பண்டைய நகரங்கள்",
+        "புவியியல்-அலகு 1: பேரண்டம் மற்றும் சூரியக்குடும்பம்",
+        "புவியியல்-அலகு 2: நிலப்பரப்பும் பெருங்கடல்களும்",
+        "குடிமையியல்-அலகு 1: பன்முகத் தன்மையினை அறிவோம்",
+        "குடிமையியல்-அலகு 2: சமத்துவம் பெறுதல்",
+        
+	],
+    Mcqs: [
+      SocialScience6Chapter1MCQ,
+      SocialScience6Chapter2MCQ,
+      SocialScience6Chapter3MCQ,
+      SocialScience6Chapter4MCQ,
+      SocialScience6Chapter5MCQ,
+      SocialScience6Chapter6MCQ,
+      SocialScience6Chapter7MCQ,
+      SocialScience6Chapter8MCQ
+      
+      ],
+      OM: [
+      SocialScience6Chapter1_1M,
+      SocialScience6Chapter2_1M,
+      SocialScience6Chapter3_1M,
+      SocialScience6Chapter4_1M,
+      SocialScience6Chapter5_1M,
+      SocialScience6Chapter6_1M,
+      SocialScience6Chapter7_1M,
+      SocialScience6Chapter8_1M
+    ],
+    TM: [
+      SocialScience6Chapter1TM,
+      SocialScience6Chapter2TM,
+      SocialScience6Chapter3TM,
+      SocialScience6Chapter4TM,
+      SocialScience6Chapter5TM,
+      SocialScience6Chapter6TM,
+      SocialScience6Chapter7TM,
+      SocialScience6Chapter8TM
+    ],
+    FiveM: [
+      SocialScience6Chapter1_5M,
+      SocialScience6Chapter2_5M,
+      SocialScience6Chapter3_5M,
+      SocialScience6Chapter4_5M,
+      SocialScience6Chapter5_5M,
+      SocialScience6Chapter6_5M,
+      SocialScience6Chapter7_5M,
+      SocialScience6Chapter8_5M
+        
+    ],
+    Summary: [
+      SocialScience6Chapter1Summary,
+      SocialScience6Chapter2Summary,
+      SocialScience6Chapter3Summary,
+      SocialScience6Chapter4Summary,
+      SocialScience6Chapter5Summary,
+      SocialScience6Chapter6Summary,
+      SocialScience6Chapter7Summary,
+      SocialScience6Chapter8Summary
+      
+      
+      
+    ]
+
+};  
+</script>
+   
+<script>   
+
+    
+$(document).ready(function(){
+var i=0;
+
+    // PrintTOC(Physics12TOC);
+    
+    //for(i=0; i< Physics12TOC.Mcqs.length; i++) {
+        gCurChapter=0;
+        PrintChapter(gCurChapter);
+       
+       
+    //}
+
+ $("#Next").click(function(){
+    if( gCurChapter < SocialScience6TOC.Chapters.length-1) { 
+       gCurChapter++;
+       PrintChapter(gCurChapter);
+        
+       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+    }
+  });
+  $("#Prev").click(function(){
+    if(gCurChapter>0) {
+       gCurChapter--;
+       PrintChapter(gCurChapter);
+       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+  });
+    
+});
+</script>
+    <script>
+    function PrintChapter( i) {
+         document.getElementById("mcq").innerHTML = "<br><h2><div align='center'>சரியான விடையைத் தேர்ந்தெடு</div></h2>";
+       PrintMCQ(i, SocialScience6TOC.Mcqs[i]);
+       document.getElementById("mcq").innerHTML += "<br><h2><div align='center'> கோடிட்ட இடத்தை நிரப்புக</div> </h2>";
+       Print2Marks(SocialScience6TOC.OM[i]); 
+        document.getElementById("mcq").innerHTML += "<br><h2><div align='center'>ஓரிரு வார்த்தைகளில் விடையளிக்கவும் </div> </h2>";
+       Print2Marks(SocialScience6TOC.TM[i]);
+        document.getElementById("mcq").innerHTML += "<br><h2><div align='center'> பின்வரும் வினாக்களுக்கு விடையளி<div> </h2>";
+       Print2Marks(SocialScience6TOC.FiveM[i]);
+       document.getElementById("mcq").innerHTML += "<br><h2><div align='center'> படச்சுருக்கம்</div> </h2>";
+       PrintSummary(SocialScience6TOC.Summary[i]);
+        document.getElementById("chap").innerHTML = SocialScience6TOC.Chapters[i];
+    }
+    function PrintTOC(toc) {
+        var i=0;
+        var x=0;
+        var str = "";
+        var obj = toc;
+        
+        document.getElementById("toc").innerHTML = "Class :" + obj.Std + ", " + obj.Subject +"<br>";
+        for (i = 0; i < obj.Chapters.length; i++) {
+            x=i+1;
+            str = "<a href =\"index"+x+".html\">" + obj.Chapters[i] + "</a>"
+            console.log(str);
+            document.getElementById("toc").innerHTML += str + "<br>";
+        }
+        
+    }
+    
+    </script>
+    <script>
+    function PrintMCQ( c, mcq) { 
+        var i=0;
+        var x="";
+        var id = "";
+        var str = "";
+        //var button1 = "<button onclick="getElementById(id).innerHTML='C'">Ans</button>"
+        
+        
+        for (i = 0; i < mcq.length; i++) {
+            str = "<br><br><b>"+mcq[i].question + "</b><br>";
+            if( typeof mcq[i].answers.figure != 'undefined')
+               str += mcq[i].answers.figure + "<br>";
+            str += "a. "+ mcq[i].answers.a + "<br>" + "b. "+ mcq[i].answers.b + "<br>" 
+                 + "c. "+mcq[i].answers.c + "<br>" +"d. "+ mcq[i].answers.d + "<br>";
+            id = "c"+c+"q"+i;
+           // str += "<br> Ans :" + mcq[i].correctAnswer + "<br>";
+           str += "<div id=" + "'" + id +"'> "+"</div>"; 
+
+            x= "<button onclick=\"getElementById(" + "'"+id +"'" + ").innerHTML=" + "' Ans = " + mcq[i].correctAnswer + "'" +'"'+ "> Ans </button><br>";
+            console.log(x);
+            document.getElementById("mcq").innerHTML += str + x;
+        }
+    }
+    function Print2Marks( qa ) {
+       var i=0;
+       var str = "";
+    
+       for(i=0; i< qa.length; i++) {
+           str = "<br><br><b>"+qa[i].question + "</b><br>";
+           str += qa[i].answer + "<br>";
+            
+            console.log(str);
+            document.getElementById("mcq").innerHTML += str ;
+       }
+    
+    }
+    function PrintSummary( summary ) {
+       var i=0;
+       var str = "";
+    
+        {
+           str = ""+summary[i].content + "<br>";
+           
+            
+            console.log(str);
+            document.getElementById("mcq").innerHTML += str ;
+       }
+    
+    }
+    </script>
+</head>
+<body>
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" id="6th SocialScience" >6th சமூக அறிவியல் பருவம்-1</button>
+  <button class="w3-bar-item w3-button" id="Prev" >Previous</button>
+  <button class="w3-bar-item w3-button" id="Next" >Next</button>
+  
+  <button class="w3-bar-item w3-button" id="chap" >Chapter</button>
+
+</div>
+  
+
+
+
+
+<div id="toc"></div>
+<div id="mcq"></div>
+
+
+
+
+</body>
+</html>
