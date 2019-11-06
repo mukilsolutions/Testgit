@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    displayAlign:"left",
+    displayIndent:"0em"
+
+});
+</script>
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+      tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+      "HTML-CSS": {
+        linebreaks: { automatic: true, width: "container" }          
+      }              
+   });
+</script>
+    
+    <script type="text/javascript" src="js/data1.js"></script>
+    <script type="text/javascript" src="js/data2.js"></script>
+    <script type="text/javascript" src="js/data3.js"></script>
+    <script type="text/javascript" src="js/data4.js"></script>
+    <script type="text/javascript" src="js/data5.js"></script>   
+    <script type="text/javascript" src="js/data6.js"></script>
+    <script type="text/javascript" src="js/data7.js"></script>
+    
+   
+
+
+<style>
+div.w3-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  padding: 20px;
+  font-size: 20px;
+}
+    
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+    <script>
+
+  var Science6TOC = {
+	Std: "6",
+	Subject: "அறிவியல் ",
+	Chapters: [
+		    "அலகு-1: அளவீடுகள்",
+        "அலகு-2: விசையும் இயக்கமும்",
+        "அலகு-3: நம்மைச் சுற்றியுள்ள பருப்பொருட்கள்",
+        "அலகு-4: தாவரங்கள் வாழும் உலகம்",
+        "அலகு-5: விலங்குகள் வாழும் உலகம்",
+        "அலகு-6: உடல் நலமும் சுகாதாரமும்",
+        "அலகு-7: கணினி - ஓர் அறிமுகம்",
+        
+        
+	],
+    Mcqs: [
+      Science6Chapter1MCQ,
+      Science6Chapter2MCQ,
+      Science6Chapter3MCQ,
+      Science6Chapter4MCQ,
+      Science6Chapter5MCQ,
+      Science6Chapter6MCQ,
+      Science6Chapter7MCQ
+      
+      
+      ],
+      Onemark: [
+      Science6Chapter1_1M,
+      Science6Chapter2_1M,
+      Science6Chapter3_1M,
+      Science6Chapter4_1M,
+      Science6Chapter5_1M,
+      Science6Chapter6_1M,
+      Science6Chapter7_1M
+      
+       
+    ],
+    TM: [
+      Science6Chapter1TM,
+      Science6Chapter2TM,
+      Science6Chapter3TM,
+      Science6Chapter4TM,
+      Science6Chapter5TM,
+      Science6Chapter6TM,
+      Science6Chapter7TM
+      
+       
+    ],
+    FiveM: [
+      Science6Chapter15M,
+      Science6Chapter25M,
+      Science6Chapter35M,
+      Science6Chapter45M,
+      Science6Chapter55M,
+      Science6Chapter65M,
+      Science6Chapter75M
+      
+      
+    ],
+    Summary: [
+      Science6Chapter1Summary,
+      Science6Chapter2Summary,
+      Science6Chapter3Summary,
+      Science6Chapter4Summary,
+      Science6Chapter5Summary,
+      Science6Chapter6Summary,
+      Science6Chapter7Summary
+  ]
+
+};  
+</script>
+   
+<script>   
+
+    
+$(document).ready(function(){
+var i=0;
+
+    // PrintTOC(Physics12TOC);
+    
+    //for(i=0; i< Physics12TOC.Mcqs.length; i++) {
+        gCurChapter=0;
+        PrintChapter(gCurChapter);
+       
+       
+    //}
+
+ $("#Next").click(function(){
+    if( gCurChapter < Science6TOC.Chapters.length-1) { 
+       gCurChapter++;
+       PrintChapter(gCurChapter);
+        
+       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+    }
+  });
+  $("#Prev").click(function(){
+    if(gCurChapter>0) {
+       gCurChapter--;
+       PrintChapter(gCurChapter);
+       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+  });
+    
+});
+</script>
+    <script>
+    function PrintChapter( i) {
+         document.getElementById("mcq").innerHTML = "<br><h2><div align='center'>சரியான விடையைத் தேர்ந்தெடு</div></h2>";
+       PrintMCQ(i, Science6TOC.Mcqs[i]); 
+       document.getElementById("mcq").innerHTML += "<br><h2><div align='center'>கோடிட்ட இடத்தை நிரப்புக <div> </h2>";
+       Print2Marks(Science6TOC.Onemark[i]);
+        document.getElementById("mcq").innerHTML += "<br><h2><div align='center'>ஓரிரு வரிகளில் விடையளி</div> </h2>";
+       Print2Marks(Science6TOC.TM[i]);
+        document.getElementById("mcq").innerHTML += "<br><h2><div align='center'>விரிவாக எழுதுக<div> </h2>";
+       Print2Marks(Science6TOC.FiveM[i]);
+       document.getElementById("mcq").innerHTML += "<br><h2><div align='center'>படச்சுருக்கம்</div></h2>";
+       PrintSummary(Science6TOC.Summary[i]);
+        document.getElementById("chap").innerHTML = Science6TOC.Chapters[i];
+    }
+    function PrintTOC(toc) {
+        var i=0;
+        var x=0;
+        var str = "";
+        var obj = toc;
+        
+        document.getElementById("toc").innerHTML = "Class :" + obj.Std + ", " + obj.Subject +"<br>";
+        for (i = 0; i < obj.Chapters.length; i++) {
+            x=i+1;
+            str = "<a href =\"index"+x+".html\">" + obj.Chapters[i] + "</a>"
+            console.log(str);
+            document.getElementById("toc").innerHTML += str + "<br>";
+        }
+        
+    }
+    
+    </script>
+    <script>
+    function PrintMCQ( c, mcq) { 
+        var i=0;
+        var x="";
+        var id = "";
+        var str = "";
+        //var button1 = "<button onclick="getElementById(id).innerHTML='C'">Ans</button>"
+        
+        
+        for (i = 0; i < mcq.length; i++) {
+            str = "<br><br><b>"+mcq[i].question + "</b><br>";
+            if( typeof mcq[i].answers.figure != 'undefined')
+               str += mcq[i].answers.figure + "<br>";
+            str += "a. "+ mcq[i].answers.a + "<br>" + "b. "+ mcq[i].answers.b + "<br>" 
+                 + "c. "+mcq[i].answers.c + "<br>" +"d. "+ mcq[i].answers.d + "<br>";
+            id = "c"+c+"q"+i;
+           // str += "<br> Ans :" + mcq[i].correctAnswer + "<br>";
+           str += "<div id=" + "'" + id +"'> "+"</div>"; 
+
+            x= "<button onclick=\"getElementById(" + "'"+id +"'" + ").innerHTML=" + "' Ans = " + mcq[i].correctAnswer + "'" +'"'+ "> Ans </button><br>";
+            console.log(x);
+            document.getElementById("mcq").innerHTML += str + x;
+        }
+    }
+    function Print2Marks( qa ) {
+       var i=0;
+       var str = "";
+    
+       for(i=0; i< qa.length; i++) {
+           str = "<br><br><b>"+qa[i].question + "</b><br>";
+           str += qa[i].answer + "<br>";
+            
+            console.log(str);
+            document.getElementById("mcq").innerHTML += str ;
+       }
+    
+    }
+    function PrintSummary( summary ) {
+       var i=0;
+       var str = "";
+    
+        {
+           str = ""+summary[i].content + "<br>";
+           
+            
+            console.log(str);
+            document.getElementById("mcq").innerHTML += str ;
+       }
+    
+    }
+    </script>
+</head>
+<body>
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" id="6th Science" >6th அறிவியல் பருவம்-1</button>
+  <button class="w3-bar-item w3-button" id="Prev" >Previous</button>
+  <button class="w3-bar-item w3-button" id="Next" >Next</button>
+  
+  <button class="w3-bar-item w3-button" id="chap" >Chapter</button>
+
+</div>
+  
+
+
+
+
+<div id="toc"></div>
+<div id="mcq"></div>
+
+
+
+
+</body>
+</html>
